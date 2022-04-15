@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -31,8 +32,8 @@ class GoogleLogin : AppCompatActivity() {
         binding.googleLoginBtn.setOnClickListener(){
             signIn()
         }
-
     }
+
     private fun signIn(){
         val signInIntent=mGoogleSignInClient.signInIntent
         startActivityForResult (signInIntent,RC_SIGN_IN)
@@ -70,7 +71,7 @@ class GoogleLogin : AppCompatActivity() {
 
         }catch (e:Exception){
             // Sign in was unsuccessful
-            Log.e(
+            Log.w(
                 "failed code=",e.stackTraceToString()
             )
         }
@@ -78,7 +79,7 @@ class GoogleLogin : AppCompatActivity() {
     private fun signOut() {
         mGoogleSignInClient.signOut()
             .addOnCompleteListener(this) {
-                // Update your UI here
+            //Update UI
             }
     }
 }

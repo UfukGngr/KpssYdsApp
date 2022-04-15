@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_google_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_kpss.xml" value="0.22735507246376813" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2740966796875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.184375" />
+        <entry key="app/src/main/res/layout/kpssrecylerviewitem.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/profilerecylerviewitem.xml" value="0.25" />
       </map>
     </option>
   </component>
