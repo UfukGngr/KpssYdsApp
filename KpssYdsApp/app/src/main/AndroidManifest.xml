@@ -11,7 +11,7 @@
         android:theme="@style/Theme.KpssYdsApp">
         <activity
             android:name=".GoogleLogin"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".KpssActivity"
             android:exported="false" />
@@ -21,7 +21,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

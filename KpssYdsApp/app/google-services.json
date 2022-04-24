@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "243698478133",
+    "project_id": "kpssydsapp",
+    "storage_bucket": "kpssydsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243698478133:android:cb34d1bf18cd2e38ad157c",
+        "android_client_info": {
+          "package_name": "com.ufukgungor.kpssydsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243698478133-197gn70lp9hrgp1n5fuo4l95tln8fpsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSc2mYGzeXYsvajqCxUmY2mtoyjm16CQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243698478133-197gn70lp9hrgp1n5fuo4l95tln8fpsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

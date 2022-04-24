@@ -1,40 +1,99 @@
 package com.ufukgungor.kpssydsapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.activity.result.contract.ActivityResultContracts
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.ufukgungor.kpssydsapp.databinding.ActivityGoogleLoginBinding
 
 
 class GoogleLogin : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
+    var userEmail = ""
+    var password = ""
     private lateinit var binding: ActivityGoogleLoginBinding
+    /*
     lateinit var mGoogleSignInClient: GoogleSignInClient
-    private val RC_SIGN_IN=9001
-
+    private val RC_SIGN_IN=9001*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGoogleLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        auth = Firebase.auth
+        val currentUser = auth.currentUser
+
+        if (currentUser != null) {
+            val intent = Intent(applicationContext, ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        /*
         val gso=GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken("404463704958-od8li7kcop0lsb8ntq25d1j4j98nt7tg.apps.googleusercontent.com").requestEmail().build()
 
         mGoogleSignInClient=GoogleSignIn.getClient(this,gso)
         binding.googleLoginBtn.setOnClickListener(){
             signIn()
+        }*/
+    }
+
+    fun signInClicked(view: View) {
+        userEmail = binding.userEmailText.text.toString()
+        password = binding.passwordText.text.toString()
+
+        if (userEmail.isNotEmpty() && password.isNotEmpty()) {
+            auth.signInWithEmailAndPassword(userEmail, password).addOnCompleteListener { task ->
+
+                if (task.isSuccessful) {
+                    //Signed In
+                    Toast.makeText(
+                        applicationContext,
+                        "Welcome: ${auth.currentUser?.email.toString()}",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    val intent = Intent(applicationContext, ProfileActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
+                }
+
+            }.addOnFailureListener { exception ->
+                Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
+                    .show()
+            }
         }
     }
 
-    private fun signIn(){
+    fun signUpClicked(view: View) {
+
+        userEmail = binding.userEmailText.text.toString()
+        password = binding.passwordText.text.toString()
+
+        if (userEmail.isNotEmpty() && password.isNotEmpty()) {
+            auth.createUserWithEmailAndPassword(userEmail, password).addOnCompleteListener { task ->
+
+                if (task.isSuccessful) {
+                    val intent = Intent(applicationContext, ProfileActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+
+            }.addOnFailureListener { exception ->
+                Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
+                    .show()
+
+            }
+        }
+    }
+
+/*
+        private fun signIn(){
         val signInIntent=mGoogleSignInClient.signInIntent
         startActivityForResult (signInIntent,RC_SIGN_IN)
     }
@@ -81,5 +140,5 @@ class GoogleLogin : AppCompatActivity() {
             .addOnCompleteListener(this) {
             //Update UI
             }
-    }
+    }*/
 }
