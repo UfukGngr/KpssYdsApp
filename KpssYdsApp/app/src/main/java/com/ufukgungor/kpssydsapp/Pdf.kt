@@ -1,6 +1,5 @@
 package com.ufukgungor.kpssydsapp
 
-import java.io.Serializable
+import java.io.File
 
-class Pdf(var pdfName:String): Serializable {
-}
+data class Pdf(val baslik1:String,val baslik2:String)

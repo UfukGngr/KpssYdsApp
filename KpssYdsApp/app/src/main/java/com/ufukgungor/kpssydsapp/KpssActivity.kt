@@ -1,29 +1,39 @@
 package com.ufukgungor.kpssydsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.info.sqlitekullanimihazirveritabani.DatabaseCopyHelper
 import com.ufukgungor.kpssydsapp.databinding.ActivityKpssBinding
-import com.ufukgungor.kpssydsapp.databinding.ActivityMainBinding
 
 class KpssActivity : AppCompatActivity() {
     private lateinit var binding: ActivityKpssBinding
-    private lateinit var pdfList: ArrayList<Pdf>
+    var baslik1: String = "Tarih"
+    var baslik2: String = "Coğrafya"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityKpssBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        binding.testButton.text = baslik1
+        binding.testButton2.text = baslik2
 
-        pdfList=ArrayList<Pdf>()
-        val tarih=Pdf("Tarih")
-        val cografya=Pdf("Cografya")
-
-        pdfList.add(tarih)
-        pdfList.add(cografya)
-
-        binding.kpssrecylerView.layoutManager=LinearLayoutManager(this)
-        val adapter=PdfAdapter(pdfList)
-        binding.kpssrecylerView.adapter=adapter
     }
+    fun backback2(view: View){
+        val intent = Intent(this@KpssActivity, MainActivity::class.java)
+        startActivity(intent)
+    }
+    fun tarihTest(view: View) {
+        val intent = Intent(this@KpssActivity, ShowActivity::class.java)
+        startActivity(intent)
+    }
+
+   /* fun cografyaTest(view: View) {
+        val intent = Intent(this@KpssActivity, ShowActivity::class.java)
+    }*/
+
+
 }
