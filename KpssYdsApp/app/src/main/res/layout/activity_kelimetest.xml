@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F6F6"
+    android:backgroundTint="#F6F4F4"
+    tools:context=".Kelimetest">
+
+    <Button
+        android:id="@+id/sonrakiSoru"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="sonrakisoru"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/oncekiSoru" />
+
+    <RadioGroup
+        android:layout_width="393dp"
+        android:layout_height="241dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/sonrakiSoru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/s1A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task"
+            android:textColor="#040000" />
+
+        <RadioButton
+            android:id="@+id/s1B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jeopardy"
+            android:textColor="#070000" />
+
+        <RadioButton
+            android:id="@+id/s1C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effort"
+            android:textColor="#040000" />
+
+        <RadioButton
+            android:id="@+id/s1D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Failure"
+            android:textColor="#050000" />
+
+        <RadioButton
+            android:id="@+id/s1E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Achievement"
+            android:textColor="#020000" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/soru1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:text="Today, after a decade of isolation and a devastating war, Iraq faces the daunting ---- of reconstructing its economy."
+        android:textColor="#121111"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/oncekiSoru"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sonrakiSoru"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/soru2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deneme"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="19dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7F7"
+    android:backgroundTint="#F6F3F3"
+    android:orientation="vertical"
+    tools:context=".Kelimeler">
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="520dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Task : Görev"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Dangerous : Tehlikeli"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Destroy : Yok Etmek"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Concern : Kaygı"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Widely : Geniş Çapta"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Revolt : İsyan Etmek"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Especially : Özellikle"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Accustom : Alıştırmak"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Expend : Genişletmek"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Confirm: Onaylamak"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Prevalent : Yaygın"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Usually : Genellikle"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Issue : Sorun"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Conductivity : İletkenlik"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Decay : Çürüme"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="Rich : Zengin"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24dp" />
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/kelimeCikis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:onClick="ydsSayfa"
+        android:text="Çıkış"
+        android:textSize="26dp" />
+
+</LinearLayout>
